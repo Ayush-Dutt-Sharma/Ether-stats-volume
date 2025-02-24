@@ -13,6 +13,7 @@ import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 
 export default function Dashboard() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [blocks, setBlocks] = useState<any[]>([])
 
   const { data, isLoading, error, refetch, isFetching } = useQuery({

@@ -10,6 +10,7 @@ import { motion } from 'framer-motion'
 import { Block } from 'alchemy-sdk'
 
 interface TokenVolumeChartProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   blocks: any[]
   tokenAddress: string
 }

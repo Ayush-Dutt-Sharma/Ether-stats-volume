@@ -11,7 +11,7 @@ export async function fetchLatestBlocks() {
   return blocks.reverse() // Oldest to newest
 }
 
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function getERC20TransferVolume(block: any, tokenAddress: string) {
   try {
     const logs = await alchemy.core.getLogs({
@@ -20,7 +20,7 @@ export async function getERC20TransferVolume(block: any, tokenAddress: string) {
       address: tokenAddress,
       topics: [ethers.id('Transfer(address,address,uint256)')],
     })
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
     const totalVolume = logs.reduce((acc: number, log: any) => {
       try {
         const value = ethers.AbiCoder.defaultAbiCoder().decode(

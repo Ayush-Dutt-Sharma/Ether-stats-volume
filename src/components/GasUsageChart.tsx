@@ -16,6 +16,7 @@ import { AlertCircle } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 interface GasUsageChartProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   blocks: any[]
 }
 
